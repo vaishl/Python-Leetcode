@@ -1,0 +1,42 @@
+class searchinsert(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+    
+        
+        """
+        if target not in nums:
+            nums2 = copy.deepcopy(nums)
+            nums2.append(target)
+            nums2 = sorted(nums2)
+            x= nums2.index(target)
+            return x
+        else:
+            y= nums.index(target)
+            return y
+        """
+        left=0
+        right=len(nums)-1
+        while left <= right:
+            middle = (left+right) // 2
+
+            if target> nums[middle]:
+                left = middle+1 #must be right of middle
+            elif target< nums[middle]:
+                right = middle-1 #must be left of middle
+            else:
+                return middle #in this case the target is just middle of array
+
+        #at this point, while loop must be broken, ie right > left they cross
+        if nums[middle] < target:
+            return middle+1
+        else:
+            return middle
+
+            #this is binary search 
+        
+
+        
