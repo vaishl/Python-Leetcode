@@ -1,4 +1,4 @@
-class Solution(object):
+class removeobject(object):
     def removeElement(self, nums, val):
         """
         :type nums: List[int]
