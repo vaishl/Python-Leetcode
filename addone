@@ -1,0 +1,41 @@
+class addone:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        """
+        setdigits = set(digits)
+        putback = list(setdigits)
+        
+        if len(putback) == 1 and putback[0] == 9: #if all num 9
+            for i in digits:
+                digits[i] = 0
+            digits.append(1)
+            return reverse(digits)
+        elif 9 in digits:
+            for i in range(0, len(digits):
+                digits2= reversed(digits)
+                if digits2[i] == 9 and digits2[i+1] !=9:
+                    digits2[i] = 0
+                    digits2[i+1] +=1
+                elif digits2[i] == 9 and digits2[i+1] == 9:
+                    digits2[i] = 0
+                    digits
+        
+        elif digits[-1] != 9:
+            digits[-1] = digits[-1] + 1
+            return digits
+        """
+
+        s=""
+        for d in digits:
+            y =str(d)
+            s= s+y
+        int1=int(s)
+        int1=int1+1
+        str2= str(int1)
+
+        digits3=[]
+        for i in str2:
+            digits3.append(i)
+        digits = [int(x) for x in digits3]
+        return digits
+
+#You can convert the array to str and int to perform operations then convert back
